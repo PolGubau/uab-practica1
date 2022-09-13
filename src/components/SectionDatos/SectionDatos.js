@@ -6,7 +6,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { BsFillFlagFill } from "react-icons/bs";
 import { BsPhone, BsFillPeopleFill } from "react-icons/bs";
 import { AiFillHome, AiFillPhone, AiFillCar } from "react-icons/ai";
-
+import "./SectionDatos.css";
 export default function SectionDatos() {
   return (
     <div className="datosPersonales">
