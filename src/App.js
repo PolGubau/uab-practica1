@@ -2,6 +2,7 @@ import "./App.css";
 import SectionAbilidades from "./components/SectionAbilidades/SectionAbilidades";
 
 import SectionDatos from "./components/SectionDatos/SectionDatos";
+import SectionPerfil from "./components/SectionPerfil/SectionPerfil";
 
 function App() {
   return (
@@ -47,7 +48,9 @@ function App() {
             />
           </section>
 
-          <section className="columna columna2">perfil y más</section>
+          <section className="columna columna2">
+            <SectionPerfil />
+          </section>
         </main>
       </div>
     </div>

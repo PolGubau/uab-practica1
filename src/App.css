@@ -40,9 +40,10 @@
 }
 
 .main {
+  gap: 6%;
   padding: 30px;
   display: grid;
-  grid-template-columns: 34% 66%;
+  grid-template-columns: 34% 60%;
 }
 
 
