@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--grey);
+}
+
+.titulo {
+    font-weight: 600;
+    font-size: 1.2em;
+}
