@@ -33,7 +33,7 @@
 .avatar {
   position: absolute;
   top: 20px;
-  left: 50px;
+  left: 60px;
   width: 180px;
   border-radius: 50%;
   border: 7px solid var(--grey);
@@ -42,7 +42,7 @@
 .main {
   padding: 30px;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 34% 66%;
 }
 
 
