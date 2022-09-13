@@ -8,7 +8,7 @@ function App() {
     <div className="app">
       <div className="content">
         <header className="header">
-          <p className="name">Germán Rossi</p>
+          <p className="name">Germán Rossi </p>
 
           <img
             src={`https://api.multiavatar.com/${Math.random()
