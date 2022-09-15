@@ -7,42 +7,51 @@ import { BsFillFlagFill } from "react-icons/bs";
 import { BsPhone, BsFillPeopleFill } from "react-icons/bs";
 import { AiFillHome, AiFillPhone, AiFillCar } from "react-icons/ai";
 import "./SectionDatos.css";
-export default function SectionDatos() {
+export default function SectionDatos({ user }) {
+  const estadoCivil = ["Soltero", "Casado", "Divorciado", "Viudo"];
+
+  function getRandomArrayElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function getRandomTelefon() {
+    return Math.floor(Math.random() * 100000000);
+  }
+
   return (
     <div className="datosPersonales">
       <TitulosSeccion titulo="Datos Personales" />
       <ul className="datoTable">
         <li className="datoRow">
           <FaUserAlt className="datoIcon" />
-          Germán Rossi
+          {user.nombre_completo || "Germán Rossi"}
         </li>
         <li className="datoRow">
           <AiFillHome className="datoIcon" />
-          Calle 24 5632, City Bell, La Fista
+          {user.direccion || "Calle 24 5532"},{user.municipio || "City Bell"},
+          {user.provincia || "La Fista"}
         </li>
         <li className="datoRow">
-          <AiFillPhone className="datoIcon" />
-          12345678
+          <AiFillPhone className="datoIcon" />6{getRandomTelefon()}
         </li>
         <li className="datoRow">
           <MdOutlineAlternateEmail className="datoIcon" />
-          germanrossi@gmail.com
+          {user.email || "germanrossi@gmail.com"}
         </li>
         <li className="datoRow">
           <BiCalendar className="datoIcon" />
-          04/01/1995
+          {user.fecha_nacimiento || "04/01/1995"}
         </li>
         <li className="datoRow">
           <BsFillFlagFill className="datoIcon" />
-          Argentina
+          España
         </li>
         <li className="datoRow">
-          <BsPhone className="datoIcon" />
-          98765432
+          <BsPhone className="datoIcon" />6{getRandomTelefon()}
         </li>
         <li className="datoRow">
           <BsFillPeopleFill className="datoIcon" />
-          Soltero
+          {getRandomArrayElement(estadoCivil)}
         </li>
         <li className="datoRow">
           <AiFillCar className="datoIcon" />
