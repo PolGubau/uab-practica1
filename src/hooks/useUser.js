@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export default function useUser() {
   let [user, setUser] = useState("");
   useEffect(() => {
+    // https://randomuser.me/api
     fetch("https://api.generadordni.es/v2/profiles/person?results=1").then(
       (result) => {
         result
