@@ -17,6 +17,13 @@ export default function SectionDatos({ user }) {
   function getRandomTelefon() {
     return Math.floor(Math.random() * 100000000);
   }
+  function getRandomDate() {
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth();
+    let day = date.getDay();
+    return `${day}/${month}/${year}`;
+  }
 
   return (
     <div className="datosPersonales">
@@ -40,7 +47,7 @@ export default function SectionDatos({ user }) {
         </li>
         <li className="datoRow">
           <BiCalendar className="datoIcon" />
-          {user.fecha_nacimiento || "04/01/1995"}
+          {user.fecha_nacimiento || getRandomDate()}
         </li>
         <li className="datoRow">
           <BsFillFlagFill className="datoIcon" />
