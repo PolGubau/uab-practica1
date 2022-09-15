@@ -1,0 +1,34 @@
+.text {
+    font-size: 1em;
+}
+
+
+.experiencias {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.experiencia {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.experienciaContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.titleExp {
+    margin: 0;
+}
+
+.subTitleExp {
+    margin: 0;
+    font-size: 1em;
+}
