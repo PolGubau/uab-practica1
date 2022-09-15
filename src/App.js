@@ -1,12 +1,15 @@
 import "./App.css";
-import SectionAbilidades from "./components/SectionAbilidades/SectionAbilidades";
+import SectionHabilidades from "./components/SectionHabilidades/SectionHabilidades";
 
 import SectionDatos from "./components/SectionDatos/SectionDatos";
+import SectionExperiencia from "./components/SectionExperiencia/SectionExperiencia";
 import SectionPerfil from "./components/SectionPerfil/SectionPerfil";
 import useUser from "./hooks/useUser";
 
 function App() {
   const user = useUser();
+
+
 
   return (
     <div className="app">
@@ -14,13 +17,15 @@ function App() {
         <header className="header">
           <p className="name">{user.nombre_completo || "Germán Rossi"}</p>
           {user ? (
-            <img
-              src={`https://api.multiavatar.com/${Math.random().toString(
-                36
-              )}.svg`}
-              alt="logo"
-              className="avatar"
-            />
+            <>
+              <img
+                src={`https://api.multiavatar.com/${Math.random().toString(
+                  36
+                )}.svg`}
+                alt="logo"
+                className="avatar"
+              />
+            </>
           ) : (
             <p>Cargando...</p>
           )}
@@ -28,7 +33,7 @@ function App() {
         <main className="main">
           <section className="columna columna1">
             <SectionDatos titulo="Datos Personales" user={user} />
-            <SectionAbilidades
+            <SectionHabilidades
               titulo="Habilidades"
               habilidades={[
                 "Disciplinado",
@@ -38,11 +43,11 @@ function App() {
                 "Relaciones Públicas",
               ]}
             />
-            <SectionAbilidades
+            <SectionHabilidades
               titulo="Idiomas"
               habilidades={["Español", "Inglés", "Francés", "Portugués"]}
             />
-            <SectionAbilidades
+            <SectionHabilidades
               titulo="Informática"
               habilidades={[
                 "Microsoft Excel",
@@ -56,6 +61,7 @@ function App() {
 
           <section className="columna columna2">
             <SectionPerfil />
+            <SectionExperiencia />
           </section>
         </main>
       </div>
