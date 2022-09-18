@@ -5,11 +5,10 @@ import SectionDatos from "./components/SectionDatos/SectionDatos";
 import SectionExperiencia from "./components/SectionExperiencia/SectionExperiencia";
 import SectionPerfil from "./components/SectionPerfil/SectionPerfil";
 import useUser from "./hooks/useUser";
+import SectionEducacion from "./components/SectionEducacion/SectionEducacion";
 
 function App() {
   const user = useUser();
-
-
 
   return (
     <div className="app">
@@ -62,6 +61,7 @@ function App() {
           <section className="columna columna2">
             <SectionPerfil />
             <SectionExperiencia />
+            <SectionEducacion />
           </section>
         </main>
       </div>
