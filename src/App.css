@@ -12,7 +12,20 @@
 }
 
 
-
+.refresh{
+  position: absolute;
+  background-color: rgb(224, 61, 61);
+  top: 5px;
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  color: white;
+align-items: center;
+  right: 5px;
+  border-radius: 10px;
+}
 .header {
   display: flex;
   justify-content: center;
