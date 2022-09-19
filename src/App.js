@@ -1,27 +1,39 @@
 import "./App.css";
-import SectionAbilidades from "./components/SectionAbilidades/SectionAbilidades";
+import SectionHabilidades from "./components/SectionHabilidades/SectionHabilidades";
 
 import SectionDatos from "./components/SectionDatos/SectionDatos";
+import SectionExperiencia from "./components/SectionExperiencia/SectionExperiencia";
+import SectionPerfil from "./components/SectionPerfil/SectionPerfil";
+import useUser from "./hooks/useUser";
+import SectionEducacion from "./components/SectionEducacion/SectionEducacion";
+import SectionCompetencia from "./components/SectionCompetencia/SectionCompetencia";
 
 function App() {
+  const user = useUser();
+  console.log(user);
   return (
     <div className="app">
       <div className="content">
         <header className="header">
-          <p className="name">Germán Rossi</p>
-
-          <img
-            src={`https://api.multiavatar.com/${Math.random()
-              .toString(36)
-              .substring(7)}.png`}
-            alt="logo"
-            className="avatar"
-          />
+          <p className="name">{user.fullname || "Germán Rossi"}</p>
+          {user ? (
+            <>
+              <img
+                src={`https://api.multiavatar.com/${Math.random().toString(
+                  36
+                )}.svg`}
+                alt="logo"
+                className="avatar"
+              />
+            </>
+          ) : (
+            <p>Cargando...</p>
+          )}
         </header>
         <main className="main">
           <section className="columna columna1">
-            <SectionDatos titulo="Datos Personales" />
-            <SectionAbilidades
+            <SectionDatos titulo="Datos Personales" user={user} />
+            <SectionHabilidades
               titulo="Habilidades"
               habilidades={[
                 "Disciplinado",
@@ -31,11 +43,11 @@ function App() {
                 "Relaciones Públicas",
               ]}
             />
-            <SectionAbilidades
+            <SectionHabilidades
               titulo="Idiomas"
               habilidades={["Español", "Inglés", "Francés", "Portugués"]}
             />
-            <SectionAbilidades
+            <SectionHabilidades
               titulo="Informática"
               habilidades={[
                 "Microsoft Excel",
@@ -45,9 +57,14 @@ function App() {
                 "Cegit",
               ]}
             />
+            <SectionCompetencia />
           </section>
 
-          <section className="columna columna2">perfil y más</section>
+          <section className="columna columna2">
+            <SectionPerfil />
+            <SectionExperiencia />
+            <SectionEducacion />
+          </section>
         </main>
       </div>
     </div>

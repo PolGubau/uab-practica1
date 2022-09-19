@@ -1,8 +1,9 @@
 import React from "react";
 import TitulosSeccion from "../TitulosSeccion/TitulosSeccion";
-import "./SectionAbilidades.css";
+import "./SectionHabilidades.css";
+import { motion } from "framer-motion";
 
-export default function SectionAbilidades({ titulo, habilidades }) {
+export default function SectionHabilidades({ titulo, habilidades }) {
   return (
     <div className="datosPersonales">
       <TitulosSeccion titulo={titulo} />
@@ -11,13 +12,16 @@ export default function SectionAbilidades({ titulo, habilidades }) {
         {habilidades.map((habilidad, index) => (
           <li key={index} className="habilidad">
             {habilidad}
+
             <div className="barra">
               {/* Apply a randpm with every porcentaje */}
 
-              <div
+              <motion.div
                 className="porcentaje"
-                style={{ width: `${Math.random() * 100}%` }}
-              ></div>
+                initial={{ width: 0 }}
+                animate={{ width: `${Math.random() * 100}%` }}
+                transition={{ type: "spring", stiffness: 100 }}
+              ></motion.div>
             </div>
           </li>
         ))}
