@@ -6,15 +6,16 @@ import SectionExperiencia from "./components/SectionExperiencia/SectionExperienc
 import SectionPerfil from "./components/SectionPerfil/SectionPerfil";
 import useUser from "./hooks/useUser";
 import SectionEducacion from "./components/SectionEducacion/SectionEducacion";
+import SectionCompetencia from "./components/SectionCompetencia/SectionCompetencia";
 
 function App() {
   const user = useUser();
-
+  console.log(user);
   return (
     <div className="app">
       <div className="content">
         <header className="header">
-          <p className="name">{user.nombre_completo || "Germán Rossi"}</p>
+          <p className="name">{user.fullname || "Germán Rossi"}</p>
           {user ? (
             <>
               <img
@@ -56,6 +57,7 @@ function App() {
                 "Cegit",
               ]}
             />
+            <SectionCompetencia />
           </section>
 
           <section className="columna columna2">
