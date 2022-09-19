@@ -11,7 +11,7 @@ export default function SectionEducacion() {
           <div className="experienciaContent">
             <h3 className="titleExp">Contador Público</h3>
             <p className="subTitleExp">
-              Universidad de Buenos Aires (UBA) - Buenos Aires - Promedio: 8
+              Universidad de Buenos Aires (UBA) - Buenos Aires -<br/> Promedio: 8
             </p>
             <p className="text">
               Durante mi formación me he capacitado para asesorar personasy
