@@ -17,12 +17,12 @@ export default function SectionDatos({ user }) {
   function getRandomTelefon() {
     return Math.floor(Math.random() * 100000000);
   }
-  function getRandomDate() {
-    let date = new Date();
-    let year = date.getFullYear();
-    let month = date.getMonth();
-    let day = date.getDay();
-    return `${day}/${month}/${year}`;
+  function getRandomDateSince1950() {
+    const date = new Date();
+    date.setFullYear(1950 + Math.floor(Math.random() * 70));
+    date.setMonth(Math.floor(Math.random() * 12));
+    date.setDate(Math.floor(Math.random() * 28));
+    return date;
   }
 
   return (
@@ -31,12 +31,12 @@ export default function SectionDatos({ user }) {
       <ul className="datoTable">
         <li className="datoRow">
           <FaUserAlt className="datoIcon" />
-          {user.nombre_completo || "Germán Rossi"}
+          {user.fullname || "Germán Rossi"}
         </li>
         <li className="datoRow">
           <AiFillHome className="datoIcon" />
-          {user.direccion || "Calle 24 5532"},{user.municipio || "City Bell"},
-          {user.provincia || "La Fista"}
+          {user.address || "Calle 24 5532"}, {user.municipality || "City Bell"},{" "}
+          {user.province || "La Fista"}
         </li>
         <li className="datoRow">
           <AiFillPhone className="datoIcon" />6{getRandomTelefon()}
@@ -47,7 +47,7 @@ export default function SectionDatos({ user }) {
         </li>
         <li className="datoRow">
           <BiCalendar className="datoIcon" />
-          {user.fecha_nacimiento || getRandomDate()}
+          {user.birthdate || getRandomDateSince1950().toLocaleDateString()}
         </li>
         <li className="datoRow">
           <BsFillFlagFill className="datoIcon" />
