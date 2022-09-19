@@ -59,7 +59,7 @@ function App() {
             />
             <SectionCompetencia />
           </section>
-
+{/* jsjsjsjs */}
           <section className="columna columna2">
             <SectionPerfil />
             <SectionExperiencia />
