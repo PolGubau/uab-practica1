@@ -9,7 +9,7 @@ import { AiFillHome, AiFillPhone, AiFillCar } from "react-icons/ai";
 import "./SectionDatos.css";
 export default function SectionDatos({ user }) {
   const estadoCivil = ["Soltero", "Casado", "Divorciado", "Viudo"];
-
+const carnetsArray=  ['C','D','B','A1','A2','C + D']
   function getRandomArrayElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
@@ -34,9 +34,9 @@ export default function SectionDatos({ user }) {
           {user.fullname || "Germán Rossi"}
         </li>
         <li className="datoRow">
-          <AiFillHome className="datoIcon" />
+          <AiFillHome  className="datoIcon" />
           {user.address || "Calle 24 5532"}, {user.municipality || "City Bell"},{" "}
-          {user.province || "La Fista"}
+          {user.province || "La Plata"}
         </li>
         <li className="datoRow">
           <AiFillPhone className="datoIcon" />6{getRandomTelefon()}
@@ -62,7 +62,7 @@ export default function SectionDatos({ user }) {
         </li>
         <li className="datoRow">
           <AiFillCar className="datoIcon" />
-          Classe C
+          Clase {getRandomArrayElement(carnetsArray)}
         </li>
       </ul>
     </div>
