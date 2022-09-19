@@ -1,14 +1,14 @@
 import React from "react";
 import TitulosSeccion from "../TitulosSeccion/TitulosSeccion";
-import "./SectionPerfil.css";
-export default function SectionPerfil() {
+import "./SectionCompetencia.css";
+export default function SectionCompetencia() {
   return (
     <>
       <TitulosSeccion titulo={"Competencias"} />
-      <p className="text">
+      <div className="text">
         <p>Comunicación</p>
         <p>Trabajo en equipo</p>
-      </p>
+      </div>
     </>
   );
 }
