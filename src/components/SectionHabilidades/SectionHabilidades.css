@@ -23,15 +23,19 @@
     position: relative;
     width: 50%;
     background-color: #e0e0e0;
-    height: 14px;
-    border-radius: 5px;
+    height: 14px;    
+    border-radius: 5px;  overflow: hidden;
+
+
 }
 
 .porcentaje {
     position: absolute;
-    top: 0;
+    top: 0;  overflow: hidden;
+    resize: horizontal;
     left: 0;
     height: 14px;
+    max-width: 100%;
     background-color: var(--grey);
     border-radius: 5px;
     text-align: center;
