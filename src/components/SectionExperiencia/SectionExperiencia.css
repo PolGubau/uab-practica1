@@ -2,16 +2,19 @@
     font-size: 1em;
 }
 
+.tiempo {
+    width: 200px;
+}
 
 .experiencias {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     margin-top: 10px;
     width: 100%;
 }
 
 .experiencia {
+    gap: 10px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -21,7 +24,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .titleExp {
