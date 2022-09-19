@@ -7,8 +7,16 @@
 }
 
 .datoRow {
-    display: flex;
+    display: grid;
+    grid-template-columns: 30px 1fr;
     gap: 8px;
     align-items: center;
-    list-style: none;
+    justify-items: start;
+    justify-content: center;
+    align-content: center;
+   
+}
+
+.datoIcon{
+    width: 30px;
 }
