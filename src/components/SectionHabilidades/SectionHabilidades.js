@@ -14,13 +14,14 @@ export default function SectionHabilidades({ titulo, habilidades }) {
             {habilidad}
 
             <div className="barra">
-              {/* Apply a randpm with every porcentaje */}
+              {/* Apply a random with every porcentaje  */}
 
               <motion.div
                 className="porcentaje"
                 initial={{ width: 0 }}
-                animate={{ width: `${Math.random() * 100}%` }}
+                animate={{ width: `${Math.random() * (100-50)+50}%` }}
                 transition={{ type: "spring", stiffness: 100 }}
+                
               ></motion.div>
             </div>
           </li>
