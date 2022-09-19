@@ -25,7 +25,7 @@ export default function SectionExperiencia() {
           <div className="experienciaContent">
             <h3 className="titleExp">Consultor BAP FICO Br.</h3>
             <p className="subTitleExp">Boftlek - La plata, Buenos Aires</p>
-            <p className="text">
+            <p className="text marginBottom0">
               Como consultor BAP FICO, oarticipé activamente en los siguientes
               proyectos:
             </p>
